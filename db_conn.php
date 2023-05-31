@@ -1,0 +1,14 @@
+<?php 
+
+$sName = "mysql.hostinger.fr";
+$uName = "u375522684_Pradel";
+$pass = "Teyssier2003!";
+$db_name = "u375522684_MENUISERIE";
+
+try {
+    $conn = new PDO("mysql:host=$sName;dbname=$db_name", 
+                    $uName, $pass);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $e){
+  echo "Connection failed : ". $e->getMessage();
+}
